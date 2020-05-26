@@ -1,5 +1,5 @@
 // MULTHREE
-// TODO Complete This Plm
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -11,15 +11,33 @@ void solve()
     cin >> d0;
     cin >> d1;
     ll sum = d0 + d1;
+    if (k == 2)
+    {
+        if (sum % 3 == 0)
+        {
+            cout << "YES";
+        }
+        else
+        {
+            cout << "NO";
+        }
+        return;
+    }
+
+    if (sum == 5 || sum == 10 || sum == 15)
+    {
+        cout << "NO";
+        return;
+    }
     ll j = 3;
     while (j <= k)
     {
-        int d1 = (sum % 10);
-        if (d1 == 2)
+        int d2 = (sum % 10);
+        if (d2 == 2)
         {
             break;
         }
-        sum += d1;
+        sum += d2;
         j++;
     }
     if (j < k)
@@ -28,20 +46,18 @@ void solve()
 
         sum = sum + (20 * times20);
         int rem = (k - j + 1) % 4;
-        switch (rem)
-        {
-        case 1:
-            sum = sum + 2;
-            break;
-        case 2:
-            sum = sum + 6;
-            break;
 
-        case 3:
-            break;
-            sum = sum + 14;
-        default:
-            break;
+        if (rem == 1)
+        {
+            sum += 2;
+        }
+        else if (rem == 2)
+        {
+            sum += 6;
+        }
+        else if (rem == 3)
+        {
+            sum += 14;
         }
     }
 
