@@ -3,18 +3,25 @@
 using namespace std;
 typedef long long ll;
 
-/*  
-    TODO Complete This
-    N boxes 1 to N
-*/
-
 void solve()
 {
-    int n;
+    long int n;
     cin >> n;
-    for (int i = 0; i < n; i++)
+    long int num;
+    cin >> num;
+    long int max_sum = num;
+    long int min_box = num;
+    for (long int i = 1; i < n; i++)
     {
+        cin >> num;
+        if (min_box > num)
+        {
+            min_box = num;
+        }
+        max_sum += min_box;
     }
+
+    cout << max_sum;
 }
 
 int main()
