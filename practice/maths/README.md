@@ -6,8 +6,7 @@
 
   - Compound Intrest
   - Arithmetic
-  - links
-    [Problems on Brute Force Math](https://codeforces.com/problemset?tags=math,brute%20force)
+  - [ ] [problems on brute force math](https://codeforces.com/problemset?tags=math,brute%20force)
 
 - Big Integer Problems
 
