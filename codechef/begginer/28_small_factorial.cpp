@@ -1,30 +1,15 @@
-// ISHVALA
-// TODO
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 
 void solve()
 {
-    int N, M, X, Y, S;
-    int ans = 0;
-    cin >> N >> M;
-    cin >> X >> Y >> S;
-
-    vector<int> x_river_flow(X);
-    vector<int> y_river_flow(Y);
-    for (int i = 0; i < X; i++)
+    int num;
+    cin >> num;
+    int ans = 1;
+    for (int i = 2; i <= num; i++)
     {
-        int num;
-        cin >> num;
-        x_river_flow.push_back(num);
-    }
-
-    for (int i = 0; i < Y; i++)
-    {
-        int num;
-        cin >> num;
-        y_river_flow.push_back(num);
+        ans *= i;
     }
 
     cout << ans;

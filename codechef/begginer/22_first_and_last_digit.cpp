@@ -1,34 +1,31 @@
-// ISHVALA
-// TODO
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 
 void solve()
 {
-    int N, M, X, Y, S;
-    int ans = 0;
-    cin >> N >> M;
-    cin >> X >> Y >> S;
+    int num;
+    cin >> num;
+    int sum = 0;
+    sum = num % 10;
+    num = num / 10;
 
-    vector<int> x_river_flow(X);
-    vector<int> y_river_flow(Y);
-    for (int i = 0; i < X; i++)
+    if (num == 0)
     {
-        int num;
-        cin >> num;
-        x_river_flow.push_back(num);
+        cout << sum * 2;
+        return;
     }
 
-    for (int i = 0; i < Y; i++)
+    while (((int)log10(num) + 1) != 1)
     {
-        int num;
-        cin >> num;
-        y_river_flow.push_back(num);
+        num = num / 10;
     }
 
-    cout << ans;
+    sum += num % 10;
+
+    cout << sum;
 }
+
 int main()
 {
     ios_base::sync_with_stdio(false);
