@@ -5,22 +5,23 @@ typedef long long ll;
 
 void solve()
 {
-    int l, b;
+    unsigned int l, b;
     cin >> l >> b;
-
-    if ((l * b) > (2 * (l + b)))
+    unsigned int area = l * b;
+    unsigned int per = 2 * (l + b);
+    if (area > (2 * (l + b)))
     {
         cout << "Area\n";
         cout << l * b;
     }
-    else if ((l * b) < (2 * (l + b)))
+    else if (area < (2 * (l + b)))
     {
         cout << "Peri\n";
         cout << 2 * (l + b);
     }
     else
     {
-        cout << "Eq";
+        cout << "Eq\n";
         cout << 2 * (l + b);
     }
 }
