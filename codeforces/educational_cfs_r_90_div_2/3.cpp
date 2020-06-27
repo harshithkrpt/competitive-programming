@@ -1,5 +1,3 @@
-// EXUNC
-// TODO
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -7,7 +5,6 @@ typedef long long ll;
 void solve()
 {
 }
-
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -24,6 +21,5 @@ int main()
         solve();
         cout << "\n";
     }
-
     return 0;
 }

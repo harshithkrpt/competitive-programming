@@ -1,11 +1,20 @@
-// EXUNC
-// TODO
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 
 void solve()
 {
+    string s;
+    cin >> s;
+    int zs = 0;
+    int os = 0;
+    
+    for(char x: s)
+	    if(x == '0') zs++;
+    	    else os++;
+
+    cout << (min(zs,os) & 1 ? "DA" : "NET");
+    
 }
 
 int main()
@@ -24,6 +33,5 @@ int main()
         solve();
         cout << "\n";
     }
-
     return 0;
 }

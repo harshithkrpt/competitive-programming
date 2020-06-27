@@ -1,11 +1,26 @@
-// EXUNC
-// TODO
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 
+int nob(int dtb, int dc, int ps)
+{
+    return ceil(dtb / dc) * ps;
+}
+
 void solve()
 {
+	ll a,b,c;
+	cin >> a >> b >> c;
+
+	if(c <= a)
+		cout << "-1 ";
+	else
+		cout << "1 ";
+
+	if(c >= a * b)
+		cout << "-1";
+	else
+		cout << b;
 }
 
 int main()
@@ -24,6 +39,5 @@ int main()
         solve();
         cout << "\n";
     }
-
     return 0;
 }

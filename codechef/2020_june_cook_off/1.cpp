@@ -1,11 +1,26 @@
-// EXUNC
-// TODO
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 
 void solve()
 {
+    int n, b, m;
+    cin >> n >> b >> m;
+    int cnt = 0;
+    int cb = -1;
+    for (int i = 0; i < m; i++)
+    {
+        int num;
+        cin >> num;
+
+        if (cb != floor(num / b) || cb == -1)
+        {
+            cb = floor(num / b);
+            cnt++;
+        }
+    }
+
+    cout << cnt;
 }
 
 int main()
@@ -24,6 +39,5 @@ int main()
         solve();
         cout << "\n";
     }
-
     return 0;
 }
